@@ -1,0 +1,16 @@
+package second;
+import javax.swing.*;
+import java.awt.*;
+public class GoldenButton2 extends JButton{
+		public GoldenButton2(ImageIcon ic){
+			ic.setImage(ic.getImage().getScaledInstance(ic.getIconWidth()/8,ic.getIconHeight()/8,  
+	                Image.SCALE_DEFAULT));
+			setSize(ic.getImage().getWidth(null),ic.getImage().getHeight(null));
+			setIcon(ic);
+			setOpaque(false);//设置控件是否透明，true为不透明，false为透明  
+			setContentAreaFilled(false);//设置图片填满按钮所在的区域  
+			setMargin(new Insets(0, 0, 0, 0));//设置按钮边框和标签文字之间的距离  
+			setFocusPainted(false);//设置这个按钮是不是获得焦点  
+			setBorderPainted(false);//设置是否绘制边框  
+			setBorder(null);//设置边框
+		}
