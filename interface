@@ -1,0 +1,93 @@
+import javax.swing.*;
+
+import java.awt.event.*;
+import java.awt.*;
+public class Zhu extends JFrame implements ActionListener{
+  Zhu(String s){
+		super(s);
+		setSize(600,600);
+		setLocationRelativeTo(null);
+		setContentPane(pane);
+		pane.setLayout(null);
+		
+		lab1.setBounds(0, 10, 600, 48);
+		lab1.setHorizontalAlignment(JLabel.CENTER);
+		lab1.setForeground(Color.RED);
+		Font font1=new Font("华文彩云",Font.BOLD+Font.ITALIC,40);
+		lab1.setFont(font1);
+		
+		lab2.setBounds(0, 60, 600, 48);
+		lab2.setHorizontalAlignment(JLabel.CENTER);
+		lab2.setForeground(Color.RED);
+		Font font2=new Font("华文彩云",Font.BOLD+Font.ITALIC,40);
+		lab2.setFont(font2);
+		
+		btn1.setBounds(190, 180, 200, 50);
+		btn1.setForeground(Color.BLUE);//字体的颜色
+		Font font3 = new Font("方正舒体",Font.BOLD+Font.ITALIC,35);//字体的大小和样式
+		btn1.setFont(font3);
+		btn1.setBorderPainted(false);//除去按钮的边框
+		btn1.setContentAreaFilled(false);//按钮透明化
+		btn1.addActionListener(this);
+		
+		btn2.setBounds(190, 260, 200, 50);
+		btn2.setForeground(Color.BLUE);//字体的颜色
+		Font font4 = new Font("方正舒体",Font.BOLD+Font.ITALIC,35);//字体的大小和样式
+		btn2.setFont(font4);
+		btn2.setBorderPainted(false);//除去按钮的边框
+		btn2.setContentAreaFilled(false);//按钮透明化
+		btn2.addActionListener(this);
+		
+		btn3.setBounds(190, 340, 200, 50);
+		btn3.setForeground(Color.BLUE);//字体的颜色
+		Font font5 = new Font("方正舒体",Font.BOLD+Font.ITALIC,35);//字体的大小和样式
+		btn3.setFont(font5);
+		btn3.setBorderPainted(false);//除去按钮的边框
+		btn3.setContentAreaFilled(false);//按钮透明化
+		btn3.addActionListener(this);
+		
+		btn4.setBounds(190, 420, 200, 50);
+		btn4.setForeground(Color.BLUE);//字体的颜色
+		Font font6 = new Font("方正舒体",Font.BOLD+Font.ITALIC,35);//字体的大小和样式
+		btn4.setFont(font6);
+		btn4.setBorderPainted(false);//除去按钮的边框
+		btn4.setContentAreaFilled(false);//按钮透明化
+		btn4.addActionListener(this);
+		
+		Icon icon1 =new ImageIcon("主界面.jpg");
+		lab3.setIcon(icon1);
+		lab3.setBounds(0, 0, 600, 600);
+		
+		pane.add(lab1);
+		pane.add(lab2);
+		pane.add(btn1);
+		pane.add(btn2);
+		pane.add(btn3);
+		pane.add(btn4);
+		pane.add(lab3);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setVisible(true);
+	}
+	public void actionPerformed(ActionEvent e){
+		if(e.getSource()==btn1){
+			setVisible(false);
+			Number5 num=new Number5("摇彩票");
+			num.setVisible(true);
+		}
+		
+		if(e.getSource()==btn2){
+			setVisible(false);
+			Help help=new Help("游戏帮助");
+		}
+		
+		if(e.getSource()==btn3){
+			setVisible(false);
+			AboutUs aboutUs=new AboutUs("关于我们");
+		}
+		
+		if(e.getSource()==btn4){
+			System.exit(0);
+		}
+	}
+	
+}
